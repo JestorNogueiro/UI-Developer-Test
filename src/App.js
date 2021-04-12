@@ -7,10 +7,12 @@ function App() {
 
   return (
     <div className="App">
+      {/* Hamburger Button To toggle menu items by Clicking */}
       <div onClick={() => setToggle(!toggle)} className="app__toggle">
         <GiHamburgerMenu />
         <h2>Lorem</h2>
       </div>
+      {/* ClassName Default will be app__navbar By Clicking the Hamburger it will activate the 'active' ClassName  */}
       <aside className={` app__navbar ${toggle ? " active" : ""}`}>
         <h2>Lorem Lorem</h2>
         <a>Home</a>

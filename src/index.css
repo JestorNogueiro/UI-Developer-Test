@@ -1,0 +1,196 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  font-family: sans-serif;
+}
+.app__navbar {
+  position: relative;
+  margin-top: 40px;
+  float: left;
+  height: 80vh;
+  min-width: 30vw;
+  /* background-color: whitesmoke; */
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 800;
+  transition: all 800ms ease-in;
+}
+.app__navbar > a:hover {
+  position: relative;
+  cursor: pointer;
+  font-weight: 900;
+  color: rgb(70, 67, 67);
+  transform: scale(1.1);
+  transition: all 400ms ease-in;
+}
+.app__navbar > h2 {
+  font-size: 30px;
+  font-weight: 800;
+}
+.app__button {
+  background-color: rgb(250, 0, 0);
+  cursor: pointer;
+  border-radius: 20px;
+  width: 150px;
+  height: 40px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 800;
+  transition: all 500ms ease-in;
+}
+.app__button:hover {
+  transition: all 500ms ease-in;
+  transform: scale(1.1);
+  background-color: yellow;
+}
+.pic1 {
+  background-color: white;
+  height: 13em;
+  width: 10em;
+  box-shadow: 1px 1px 10px 2px grey;
+
+  margin: 5px;
+  padding: 4px 5px 10px 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+img {
+  margin: 4px;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+}
+.page__section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.app__section {
+  position: relative;
+  top: 30px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+}
+.app__title {
+  font-size: 2.2rem;
+  width: 15em;
+  margin-bottom: 25px;
+}
+.app__data {
+  width: 150px;
+  text-align: start;
+  /* margin-left: 10px;
+  margin-top: 25px; */
+}
+.app__data::after {
+  content: "";
+  width: 100px;
+  float: left;
+  text-align: start;
+
+  margin-top: 5px;
+  margin-bottom: 25px;
+  line-height: 70px;
+  border-bottom: 1px solid red;
+}
+.app__toggle {
+  display: none;
+}
+
+@media only screen and (max-width: 650px) {
+  .app__navbar {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    left: 0;
+    width: 80vw;
+    height: 90vh;
+    transform: translateX(-100%);
+    z-index: 2;
+    transition: transform 0.5s ease-in;
+    top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px 1px grey;
+  }
+  .active {
+    transform: translateX(0%);
+    z-index: 1;
+    transition: transform 0.5s ease-in;
+    top: 10px;
+  }
+  .pic1 {
+    /* margin: 0; */
+    height: 10rem;
+    width: 8em;
+  }
+  img {
+    height: 80px;
+    width: 80px;
+  }
+  .app__title {
+    flex-wrap: wrap;
+    font-size: 1rem;
+  }
+  .page__section {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -80px;
+    /* margin: 5px; */
+  }
+
+  .app__section {
+    flex-flow: column wrap;
+  }
+  .app__data {
+    position: relative;
+    bottom: -350px;
+    left: -50px;
+    width: 50%;
+    float: left;
+  }
+
+  .app__toggle {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin: 15px;
+  }
+  .app__toggle > h2 {
+    font-weight: 800;
+    text-align: center;
+    margin: auto;
+  }
+  .app__toggle > :nth-child(1) {
+    cursor: pointer;
+    font-size: 28px;
+  }
+}
